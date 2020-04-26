@@ -1,0 +1,15 @@
+<!-- pages/search/search.wxml -->
+<view class="search">
+  <input class="search_input" placeholder="请输入...." bindinput="handleChange"></input>
+  <button class="cancel">取消</button>
+</view>
+<view class="search_item">
+  <view class="item_cont">okljyhegidhfhhsks aeudurhfurincgdwwwwwwwwwwd</view>
+  <view class="item_cont">okljyhegidhfhhsks aeudurhfurincgdddddddddd</view>
+  <view class="item_cont">okljyhegidhfhhsks aeudurhfurincgdcccccccc</view>
+  <view class="item_cont">okljyhegidhfhhsks aeudurhfurincgdsssssssdedd</view>
+  <view class="item_cont">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ut ea dicta repellendus totam labore minus quas, sit ullam tenetur modi sapiente iure tempora? Amet molestias praesentium laudantium accusamus aliquam.
+  </view>
+    
+</view>

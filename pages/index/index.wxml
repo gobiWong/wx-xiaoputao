@@ -1,0 +1,20 @@
+<!-- index.wxml -->
+<view class="container">
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view> -->
+  <searchInput></searchInput>
+  <view>
+    <swiper>
+      <swiper-item wx:for="{{swiperList}}" wx:key="idd">
+        <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+          <image class="" src="{{item.src}}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

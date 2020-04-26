@@ -1,0 +1,87 @@
+<!-- pages/cart/cart.wxml -->
+<view class="cart">
+  <!-- 地址切换 -->
+  <view class="add">
+    <view class="cart_address" wx:if="{{!address.userName}}">
+      <button bindtap="handleAddress">收获地址</button>
+    </view>
+    <view wx:else class="addressDetail">{{address.userName}}</view>
+  </view>
+  <!-- 商品列表 -->
+  <block wx:if="{{carts.length!=0}}">
+     <view class="cartItem" wx:for="{{carts}}" wx:key="goods_price">
+    <view class="check">
+      <checkbox-group bindchange="handleItemChange" data-idd="{{item.goods_id}}">
+        <checkbox checked="{{item.checked}}"></checkbox>
+      </checkbox-group>
+    </view>
+    <view class="img">
+      <navigator class="imgNav" target="" url="" hover-class="navigator-hover" open-type="navigate">
+        <image class="" src="http://img.61ef.cn/news/201903/20/2019032009251784.jpg" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+      </navigator>
+    </view>
+    <view class="desc">
+      <view class="desc_text">{{item.goods_name}}</view>
+      <view class="price_num">
+        <view class="price">￥998元</view>
+        <view class="num">
+          <view class="subcount box" bindtap="subCount" data-id="{{item.goods_id}}" data-operation="{{-1}}">-</view>
+          <view class="number" bindtap="">{{item.num}}</view>
+          <view class="addcount box" bindtap="subCount" data-id="{{item.goods_id}}" data-operation="{{1}}">+</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  </block>
+  <block wx:else>
+    <view>
+      穷比，空空如也！
+    </view>
+      
+  </block>
+    
+    
+ 
+   <!-- <view class="cartItem">
+    <view class="check">
+      <checkbox-group bindchange="">
+        <checkbox></checkbox>
+      </checkbox-group>
+    </view>
+    <view class="img">
+      <navigator class="imgNav" target="" url="" hover-class="navigator-hover" open-type="navigate">
+        <image class="" src="http://img.61ef.cn/news/201903/20/2019032009251784.jpg" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+      </navigator>
+    </view>
+    <view class="desc">
+      <view class="desc_text">数额传说的很好的衣服都不管贵不贵买了再说积分具有人不是佛无阿分别只有都</view>
+      <view class="price_num">
+        <view class="price">￥998元</view>
+        <view class="num">
+          <view class="subcount box" selectable="false" space="false" decode="false">-</view>
+          <view class="number" selectable="false" space="false" decode="false">1</view>
+          <view class="addcount box" selectable="false" space="false" decode="false">+</view>
+        </view>
+      </view>
+    </view>
+  </view> -->
+  <!-- 底部工具 -->
+  <view class="bottom">
+    <view class="all">
+      <checkbox-group bindchange="handleItemAllChecked">
+        <checkbox checked="{{allChecked}}">全选</checkbox>
+      </checkbox-group>
+    </view>
+    <view class="total">
+      <view class="money">
+        <text class="money_text">合计：</text>
+        <text class="money_num">￥{{totalPrice}}</text>
+      </view>
+      <view class="free">包含运费</view>
+    </view>
+    <view class="calc">
+      <text class="pay" bindtap="handlePay">结算</text>
+      <text class="">({{totalNum}})</text>
+    </view>
+  </view>
+</view>

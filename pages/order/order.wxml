@@ -1,0 +1,27 @@
+<!--pages/order/order.wxml-->
+<text>pages/order/order.wxml</text>
+<tabs tabs="{{tabs}}" bindtabsItemChange="itemChange">
+  <block wx:if="{{tabs[0].isActive}}">
+    <view class="price">全部</view>
+    <!-- <view class="all">
+      <navigator class="goods_item" target="" url="/pages/good_detail/good_detail?goods_id=223" hover-class="navigator-hover" open-type="navigate">
+        <view class="left">
+          <image class="" src="http://pic.rmb.bdstatic.com/819a044daa66718c2c40a48c1ba971e6.jpeg" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+        </view>
+        <view class="right">
+          <view class="desc">大大大大大我的h大家节日覅人计算机网i你黑乎乎的还得及夫人囧分解警匪剧呼唤发货</view>
+          <view class="price" selectable="false" space="false" decode="false">998元</view>
+        </view>
+      </navigator>
+    </view> -->
+  </block>
+  <block wx:elif="{{tabs[1].isActive}}">
+    <view class="price">待付款</view>
+  </block>
+   <block wx:elif="{{tabs[2].isActive}}">
+    <view class="sale">待收货</view>
+  </block>
+  <block wx:elif="{{tabs[3].isActive}}">
+    <view class="price">退款/退货</view>
+  </block>
+</tabs>

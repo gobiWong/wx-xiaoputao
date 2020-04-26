@@ -1,0 +1,76 @@
+<!-- pages/user/user.wxml -->
+<view class="container">
+  <view class="userinfo">
+    <navigator wx:if="{{!userInfo.nickName}}" class="" target="" url="/pages/login/login" hover-class="navigator-hover" open-type="navigate">
+      登入
+    </navigator>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>
+<view class="main">
+  <!-- 历史足迹 -->
+  <view class="history">
+    <navigator>
+      <view>1</view>
+      <view>我的喜欢</view>
+    </navigator>
+    <navigator>
+      <view>2</view>
+      <view>收藏</view>
+    </navigator>
+    <navigator>
+      <view>3</view>
+      <view>历史</view>
+    </navigator>
+    <navigator>
+      <view>4</view>
+      <view>关注</view>
+    </navigator>
+  </view>
+  <!-- 订单 -->
+  <view class="orders_wrap">
+    <view>我的订单</view>
+    <view class="order_list">
+      <navigator url='/pages/order/order?type=1'>
+        <view>12</view>
+        <view>全部订单</view>
+      </navigator>
+      <navigator  url='/pages/order/order?type=2'>
+        <view>34</view>
+        <view>待付款</view>
+      </navigator>
+      <navigator  url='/pages/order/order?type=3'>
+        <view>56</view>
+        <view>待收货</view>
+      </navigator>
+      <navigator  url='/pages/order/order?type=4'>
+        <view>78</view>
+        <view>退款/退货</view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 收获地址管理 -->
+  <view class="address_manger">
+    <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+      收获地址管理
+    </navigator>
+  </view>
+  <!-- 管理条目 -->
+  <view class="items_manger">
+    <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+      收获地址管理
+    </navigator>
+    <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+      收获地址管理
+    </navigator>
+    <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+      收获地址管理
+    </navigator>
+  </view>
+  <view class="share">
+    <view>推荐应用给其他人</view>
+  </view>
+</view>

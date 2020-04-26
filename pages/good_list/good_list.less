@@ -1,0 +1,42 @@
+/* pages/good_list/good_list.wxss */
+page {}
+
+.all {
+  .goods_item {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+     background-color: #eee;
+    .left {
+      flex: 2;
+      // background-color: #123456;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      image {
+        width: 70%;
+      }
+    }
+
+    .right {
+      flex: 3;
+      // background-color: #654321;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .desc{
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp:2;
+      }
+      .price{
+        color: var(--themColor);
+        font-size: 32rpx;
+      }
+    }
+  }
+
+
+}

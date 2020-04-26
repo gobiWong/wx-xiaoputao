@@ -1,0 +1,19 @@
+/**app.wxss**/
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}  */
+page,view,swiper, swiper-item,text {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+page{
+  --themColor:rgb(44, 209, 85);
+  font-size: 28rpx;
+}

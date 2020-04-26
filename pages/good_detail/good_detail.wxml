@@ -1,0 +1,26 @@
+<!-- pages/good_detail/good_detail.wxml -->
+<view class="detail">
+  <swiper class="" indicator-dots="false" indicator-color="rgba(0,0,0,.3)" autoplay="false">
+    <swiper-item class="" wx:for="{{goodsObj.pics}}" wx:key="pics_id" bindtap="handlePrivew" data-url="{{item.pics_url}}">
+      <image class="" src="{{item.pics_url}}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+    </swiper-item>
+  </swiper>
+</view>
+<view class="detail_bottom">
+  <view class="contact items">
+    <view>图标1</view>
+    <view>客服</view>
+    <button class="btn_contact" open-type="contact">1</button>
+  </view>
+  <view class="share items">
+    <view>图标2</view>
+    <view>分享</view>
+    <button class="btn_share" open-type="share">1</button>
+  </view>
+  <navigator url="/pages/cart/cart" open-type="switchTab" class="items">
+    <view>图标3</view>
+    <view>购物车</view>
+  </navigator>
+  <view class="cart btn_car" bindtap="handleAddCart">加入购物车</view>
+  <view class="buy btn_now ">立即购买</view>
+</view>
